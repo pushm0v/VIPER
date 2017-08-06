@@ -26,6 +26,9 @@ class HomeViewController: UIViewController {
     @IBAction func getAJoke(_ sender: UIButton) {
         presenter.jokes()
     }
+    @IBAction func goToDetails(_ sender: UIButton) {
+        presenter.details()
+    }
 }
 
 extension HomeViewController: IHomeView {

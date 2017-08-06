@@ -10,6 +10,7 @@ import Foundation
 
 protocol IHomePresenter: class {
     func jokes()
+    func details()
 }
 
 class HomePresenter: IHomePresenter {
@@ -26,6 +27,12 @@ class HomePresenter: IHomePresenter {
     func jokes() {
         self.view?.showJoke(joke: "Wait 2 seconds")
         self.interactor.dummyGetAJoke()
+    }
+    
+    func details() {
+        self.wireframe.presentDetailsView(parameters: [
+            VIPERConstants.StringToSave : "This is a bad joke"
+            ])
     }
 }
 

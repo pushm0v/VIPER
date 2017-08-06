@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DependencyInjection" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="DependencyInjection" customModuleProvider="target">
             <connections>
-                <outlet property="labelJoke" destination="T7P-O3-SKr" id="t2O-0G-N2q"/>
+                <outlet property="labelData" destination="T7P-O3-SKr" id="Sxw-0n-xvb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,9 +26,9 @@
                         <constraint firstAttribute="width" constant="127" id="ggN-3P-8gH"/>
                         <constraint firstAttribute="height" constant="30" id="wZE-VG-hxr"/>
                     </constraints>
-                    <state key="normal" title="I want a joke !"/>
+                    <state key="normal" title="Get Data"/>
                     <connections>
-                        <action selector="getAJoke:" destination="-1" eventType="touchUpInside" id="L3m-6g-Dos"/>
+                        <action selector="buttonGetData:" destination="-1" eventType="touchUpInside" id="U0K-cn-l1b"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="??" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7P-O3-SKr">
@@ -37,27 +37,13 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4b-XY-GlN">
-                    <rect key="frame" x="124" y="367" width="127" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="127" id="oX3-eN-jfL"/>
-                        <constraint firstAttribute="height" constant="30" id="rhS-pS-fa0"/>
-                    </constraints>
-                    <state key="normal" title="Go To Details"/>
-                    <connections>
-                        <action selector="getAJoke:" destination="-1" eventType="touchUpInside" id="J0Z-qy-BLW"/>
-                        <action selector="goToDetails:" destination="-1" eventType="touchUpInside" id="wgh-od-KQe"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fDR-mv-tPI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FPa-8n-iqZ"/>
                 <constraint firstItem="T7P-O3-SKr" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="61" id="Oc1-eR-hYA"/>
                 <constraint firstItem="fDR-mv-tPI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="h9Z-VQ-dVT"/>
-                <constraint firstItem="U4b-XY-GlN" firstAttribute="top" secondItem="fDR-mv-tPI" secondAttribute="bottom" constant="19" id="lMB-Il-wUA"/>
                 <constraint firstItem="fDR-mv-tPI" firstAttribute="top" secondItem="T7P-O3-SKr" secondAttribute="bottom" constant="24" id="nDH-8U-yKV"/>
-                <constraint firstItem="U4b-XY-GlN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pbv-J4-GaH"/>
                 <constraint firstAttribute="trailing" secondItem="T7P-O3-SKr" secondAttribute="trailing" constant="62" id="zgL-ue-u1L"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="53.5"/>

@@ -10,6 +10,7 @@ import Foundation
 
 protocol IHomeWireframe: class {
     func presentView()
+    func presentDetailsView(parameters: [String: Any])
 }
 
 class HomeWireframe: IHomeWireframe {
@@ -22,5 +23,9 @@ class HomeWireframe: IHomeWireframe {
     func presentView() {
         let view = router.resolver.resolve(HomeViewController.self, argument: router)!
         router.displayView(view: view, animateDismiss: false, animateDisplay: true)
+    }
+    
+    func presentDetailsView(parameters: [String: Any]) {
+        AppRouter.sharedInstance.presentModule(module: Products.VIPER.DetailsModule, parameters: parameters)
     }
 }

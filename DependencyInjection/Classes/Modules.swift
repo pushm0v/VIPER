@@ -33,6 +33,7 @@ public enum Products {
     
     public enum VIPER: Module {
         case HomeModule
+        case DetailsModule
         
         public var productName: String {
             return "VIPER"
@@ -42,6 +43,8 @@ public enum Products {
             switch self {
             case .HomeModule:
                 return "/viper/home"
+            case .DetailsModule:
+                return "/viper/details"
             }
         }
     }

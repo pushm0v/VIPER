@@ -20,5 +20,9 @@ class CommonAssembly: Assembly {
         container.register(IDummyManager.self) {(r) in
             return DummyManager()
         }
+        
+        container.register(IDataManager.self) {(r) in
+            return DataManager()
+        }
     }
 }

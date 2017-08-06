@@ -29,7 +29,7 @@ class AppRouter: BaseAppRouter {
         let rootVC = UIApplication.shared.delegate!.window!!.rootViewController! as? UINavigationController
         
         let assembler = Assembler()
-        assembler.apply(assemblies: [CommonAssembly(), HomeAssembly()])
+        assembler.apply(assemblies: [CommonAssembly(), HomeAssembly(), DetailsAssembly()])
         
         let products: [String: (_ appRouter: IAppRouter) -> IProductRouter] = [
             Products.VIPERProduct.productName: { VIPERRouter(router: $0) }

@@ -13,7 +13,8 @@ class VIPERRouter: IProductRouter {
     let router: IAppRouter
     
     let modules: [String: (IAppRouter) -> IModule] = [
-        Products.VIPER.HomeModule.routePath: { HomeModule(router: $0) }
+        Products.VIPER.HomeModule.routePath: { HomeModule(router: $0) },
+        Products.VIPER.DetailsModule.routePath: { DetailsModule(router: $0) }
     ]
     
     init(router: IAppRouter) {
