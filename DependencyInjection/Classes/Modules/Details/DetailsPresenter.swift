@@ -12,6 +12,7 @@ protocol IDetailsPresenter: class {
     var parameters: [String : Any]? { get set }
     func getData()
     func start()
+    func dismiss()
 }
 
 class DetailsPresenter: IDetailsPresenter {
@@ -36,6 +37,10 @@ class DetailsPresenter: IDetailsPresenter {
     
     func getData() {
         self.interactor.getStringFromStorage()
+    }
+    
+    func dismiss() {
+        self.wireframe.dismiss()
     }
 }
 

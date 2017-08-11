@@ -10,6 +10,7 @@ import Foundation
 
 protocol IDetailsWireframe: class {
     func presentView(parameters: [String : Any])
+    func dismiss()
 }
 
 class DetailsWireframe: IDetailsWireframe {
@@ -22,5 +23,9 @@ class DetailsWireframe: IDetailsWireframe {
     func presentView(parameters: [String : Any]) {
         let view = router.resolver.resolve(DetailsViewController.self, arguments: router, parameters)!
         router.displayView(view: view, animateDismiss: false, animateDisplay: true)
+    }
+    
+    func dismiss() {
+        router.dismissViewFromNavigationController(animated: true, completion: { _ in })
     }
 }

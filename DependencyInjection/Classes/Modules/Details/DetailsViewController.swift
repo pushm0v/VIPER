@@ -21,10 +21,23 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.start()
+        prepareNavigationItem()
+    }
+    
+    func prepareNavigationItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Click", style: .plain, target: self, action: #selector(rightBarTapped))
+    }
+    
+    func rightBarTapped() {
+        showAlert(message: "Tapped")
     }
     
     @IBAction func buttonGetData(_ sender: UIButton) {
         presenter.getData()
+    }
+    
+    @IBAction func buttonDismiss(_ sender: UIButton) {
+        presenter.dismiss()
     }
     
 }
